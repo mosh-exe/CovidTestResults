@@ -1,1 +1,1 @@
-# CovidTestResults
+# CovidResults
