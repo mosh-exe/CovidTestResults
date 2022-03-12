@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "covid-results"
+name = "CovidTestResults"
 version = "0.1.0"
 description = ""
-authors = ["Mo"]
+authors = ["Mohammed Shahwan <mohammeds@mun.ca>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
