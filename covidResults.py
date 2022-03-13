@@ -3,7 +3,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from schedule import every, repeat, run_pending
 from dotenv import load_dotenv
 from twilio.rest import Client
 import time , os
@@ -98,8 +97,6 @@ def sendText(messageToSend):
                             to = PHONE
     )
 
-## using repeat decorator to schedule the function to be ran every 30 mintues
-@repeat(every(30).minutes)
 def covidResults():
     '''
     A basic web scraping program to get the results of a recent covid19 PCR Test
@@ -131,10 +128,4 @@ def covidResults():
     driver.quit()
 
 
-def main():
-    while True:
-        ## run all scheduled tasks
-        run_pending()
-        time.sleep(1)
-
-main()
+covidResults()
